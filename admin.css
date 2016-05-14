@@ -1,0 +1,56 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: inline;
+    color: grey;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Roboto, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+    font-weight:bold
+}
+
+#wendy b {
+
+    color: rgba(13,13,13,1.00);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration:none;
+    font-family:Roboto;
+    font-weight:bolder;
+    font-size:46px;
+}
+
+li a:hover {
+    color: rgba(33,109,206,1.00);
+}
+section {
+
+    margin: 0 1.5%;
+    width: 30%;
+    display: inline-block;
+}
+aside {
+    float: right;
+}
+div {
+    height: 30px;
+    width: 400px;
+}
+.offset {
+    left: 30px;
+    position: relative;
+    top: 80px;
+    padding-bottom: 20px;
+    width: 2000px
+}
