@@ -1,40 +1,129 @@
-<html>
-<head>
-    <title>WENDYS CUPCAKES ADMIN</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="admin.css">
-    <!-- 1. Load libraries -->
-    <!-- IE required polyfill -->
-    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
-    <script src="node_modules/zone.js/dist/zone.js"></script>
-    <script src="node_modules/reflect-metadata/Reflect.js"></script>
-    <script src="node_modules/rxjs/bundles/Rx.umd.js"></script>
-    <script src="node_modules/@angular/core/core.umd.js"></script>
-    <script src="node_modules/@angular/common/common.umd.js"></script>
-    <script src="node_modules/@angular/compiler/compiler.umd.js"></script>
-    <script src="node_modules/@angular/platform-browser/platform-browser.umd.js"></script>
-    <script src="node_modules/@angular/platform-browser-dynamic/platform-browser-dynamic.umd.js"></script>
-    <!-- 2. Load our 'modules' -->
-    <script src='app/app.component.js'></script>
-    <script src='app/main.js'></script>
-</head>
-<!-- 3. Display the application -->
-<body id="admin">
-<!-- TODO
-<my-app>Welcome to Admin Page</my-app>
+<!DOCTYPE html>
+<html lang="en">
+
+<title>Wendy's Cupcakes Admin</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Wendy's Cupcakes">
+<meta name="author" content="Triangular Team">
+
+<!-- <link rel="stylesheet" href="styles.css"> -->
+
+<!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+<link  rel="stylesheet" href="css/bootstrap.min.css">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/main.css">
+
+<!--
+<link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
 -->
-<ul>
-    <li><a class="active" href="#admin">HOME</a></li>
-    <li><a href="Messages.html">MESSAGES</a></li>
-    <li><a href="Orders.html">ORDERS</a></li>
-    <li style="float:right"><a href="index.html">LOGOUT</a></li>
-    <li style="float:right"><a>WEDNY TSE</a></li>
-</ul>
 
-<div class="offset"><section><wendy><b>HELLO WENDY,</b></wendy></section></div>
-<div class="offset"><section><wendy><b>HOW ARE YOU,</b></wendy></section></div>
-<div class="offset"><section><wendy><b>TODAY?</b></wendy></section></div>
+<!-- Custom Fonts -->
+<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
-<aside><iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=300&amp;wkst=1&amp;bgcolor=%23ccccff&amp;src=en.australian%23holiday%40group.v.calendar.google.com&amp;color=%23125A12&amp;ctz=Australia%2FSydney" style="border:solid 1px #777" width="300" height="300" frameborder="0" scrolling="no"></iframe></aside>
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+<!-- 1. Load libraries -->
+<!-- IE required polyfill -->
+<script src="node_modules/es6-shim/es6-shim.min.js"></script>
+<script src="node_modules/zone.js/dist/zone.js"></script>
+<script src="node_modules/reflect-metadata/Reflect.js"></script>
+<script src="node_modules/rxjs/bundles/Rx.umd.js"></script>
+<script src="node_modules/@angular/core/core.umd.js"></script>
+<script src="node_modules/@angular/common/common.umd.js"></script>
+<script src="node_modules/@angular/compiler/compiler.umd.js"></script>
+<script src="node_modules/@angular/platform-browser/platform-browser.umd.js"></script>
+<script src="node_modules/@angular/platform-browser-dynamic/platform-browser-dynamic.umd.js"></script>
+<script src="node_modules/systemjs/dist/system.src.js"></script>
+<script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+
+<!-- Custom Fonts -->
+<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<!-- 3. Display the application -->
+<body id="page-top" class="index">
+
+<!-- TODO fix this up
+<my-app>Customer Page</my-app>
+<a href="admin.html">Back to Admin Page</a>
+-->
+
+
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#page-top">WENDY'S CUPCAKES ADMIN</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="hidden">
+          <a href="#page-top"></a>
+        </li>
+        <li class="page-scroll">
+          <a href="#home-container">Home</a>
+        </li>
+        <li class="page-scroll">
+          <a href="#message-container">Messages</a>
+        </li>
+        <li class="page-scroll">
+          <a href="#order-container">Orders</a>
+        </li>
+        <li class="page-scroll">
+          <a href="#profile-container">Wendy Tse</a>
+        </li>
+        <li class="page-scroll">
+          <a href="index.html">Logout</a>
+        </li>
+
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+
+
+<!-- Header -->
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+          <h2>Hello Wendy, How are you Today?</h2>
+          <p>You have the 2 orders and 3 messages to work on today</p>
+      </div>
+      <div class="col-lg-6">
+        <div class="intro-text">
+          <iframe
+            src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ccccff&amp;src=en.australian%23holiday%40group.v.calendar.google.com&amp;color=%23125A12&amp;ctz=Australia%2FSydney" style="border:solid 1px #777" width="600" height="600" frameborder="0" scrolling="no"></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</header>
+
 </body>
 </html>
