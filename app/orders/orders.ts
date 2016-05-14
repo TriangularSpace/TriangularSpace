@@ -5,7 +5,7 @@ export interface IOrders {
     orderSize: string;
     progress: string;
     orderType: string;
-    custPortrait: string;
+    orderImg: string;
     orderDate: string;
     orderTime: string;
     deliveryMethod: string;
