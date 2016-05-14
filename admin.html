@@ -2,7 +2,7 @@
 <head>
     <title>WENDYS CUPCAKES ADMIN</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin.css">
     <!-- 1. Load libraries -->
     <!-- IE required polyfill -->
     <script src="node_modules/es6-shim/es6-shim.min.js"></script>
@@ -19,41 +19,22 @@
     <script src='app/main.js'></script>
 </head>
 <!-- 3. Display the application -->
-<body>
+<body id="admin">
+<!-- TODO
 <my-app>Welcome to Admin Page</my-app>
-<nav>
-    <ul>
-        <li><a href="#admin">Home</a></li>
-        <li><a href="#messages">Messages</a></li>
-        <li><a href="#orders">Orders</a></li>
-        <li class="right-side">Wendy Tse</li>
-        <li><a href="index.html">Logout</a></li>
-    </ul>
-</nav>
-<h1>Hello Wendy How are you?</h1>
+-->
+<ul>
+    <li><a class="active" href="#admin">HOME</a></li>
+    <li><a href="Messages.html">MESSAGES</a></li>
+    <li><a href="Orders.html">ORDERS</a></li>
+    <li style="float:right"><a href="index.html">LOGOUT</a></li>
+    <li style="float:right"><a>WEDNY TSE</a></li>
+</ul>
 
-<!-- put sections here -->
-<!-- div message and orders -->
-<div class="messages-orders">
-    <section>
-        <div>
-            <div><span>Orders</span> | <span>Messages</span></div>
-            <div>
-                
-            </div>
-        </div>
-        <div>
-            <img src="redvelvet-cupcake.jpg"/>
+<div class="offset"><section><wendy><b>HELLO WENDY,</b></wendy></section></div>
+<div class="offset"><section><wendy><b>HOW ARE YOU,</b></wendy></section></div>
+<div class="offset"><section><wendy><b>TODAY?</b></wendy></section></div>
 
-        </div>
-
-    </section>
-
-</div>
-
-<!-- div calendar -->
-<div class="calendar-section">
-
-</div>
+<aside><iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=300&amp;wkst=1&amp;bgcolor=%23ccccff&amp;src=en.australian%23holiday%40group.v.calendar.google.com&amp;color=%23125A12&amp;ctz=Australia%2FSydney" style="border:solid 1px #777" width="300" height="300" frameborder="0" scrolling="no"></iframe></aside>
 </body>
 </html>
