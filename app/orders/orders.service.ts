@@ -1,7 +1,8 @@
-import { Injectable } from 'angular2/core';
+import { Injectable } from '@angular/core';
 import { IOrders } from './orders';
-import { Http, Response } from 'angular2/http';
+import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
+import 'rxjs';
 
 @Injectable()
 export class OrdersService {
