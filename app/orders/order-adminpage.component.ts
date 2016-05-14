@@ -4,6 +4,7 @@ import { IOrders } from './orders';
 import { OrdersService } from './orders.service';
 
 @Component({
+    selector: 'orders-component',
     templateUrl: 'app/orders/order-adminpage.component.html',
     directives: [ROUTER_DIRECTIVES]
 })
