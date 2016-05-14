@@ -1,8 +1,9 @@
 <html>
 <head>
-  <title>Angular 2 QuickStart JS</title>
+  <title>Wendy's Cupcakes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <!-- 1. Load libraries -->
   <!-- IE required polyfill -->
   <script src="https://rumblex.s3.amazonaws.com/starter/es6-shim/es6-shim.min.js"></script>
@@ -14,13 +15,150 @@
   <script src="https://rumblex.s3.amazonaws.com/starter/@angular/compiler/compiler.umd.js"></script>
   <script src="https://rumblex.s3.amazonaws.com/starter/@angular/platform-browser/platform-browser.umd.js"></script>
   <script src="https://rumblex.s3.amazonaws.com/starter/@angular/platform-browser-dynamic/platform-browser-dynamic.umd.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
   <!-- 2. Load our 'modules' -->
   <script src='app/app.component.js'></script>
   <script src='app/main.js'></script>
+
 </head>
 <!-- 3. Display the application -->
 <body>
+
+<!-- TODO fix this up
 <my-app>Customer Page</my-app>
 <a href="admin.html">Back to Admin Page</a>
+-->
+<div id="header-container">
+    <div class="logo">
+       <h1>WENDY'S CUPCAKES</h1>
+    </div>
+    <div class="nav">
+        <div id="member-nav">
+            <ul>
+                <li><a href="#">Signup</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </div>
+        <div id="customer-nav">
+            <ul>
+                <li><a href="#home-container">Home</a></li>
+                <li><a href="#product-container">My Products</a></li>
+                <li><a href="#story-container">My Story</a></li>
+                <li><a href="#your-basket">Your Basket</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- start home section -->
+<div id="home-container">
+    <h2>Welcome to Wendy's Cupcakes Online Store</h2>
+    <img src=""/>
+    <p>We cater for your cupcake needs in Canberra in Australia for pickup and delivery.  Customised orders can be arranged for other locations within Australia.        </p>
+    <a href="#contactus-container">Contact Us</a>
+</div>
+<!-- end home section -->
+
+<!-- start my products section -->
+<div id="product-container">
+    <h2>My Products</h2>
+    <div class="product">
+        <div class="product-image"><img src="lemon-meringue-cupcake.png"/></div>
+        <h3>Lemon Meringue Cupcake</h3>
+        <p>Sinking your teeth into these golden, buttery cakes with their gooey lemon centre and sticky white Italian merigue frosting is a sheer taste of heaven.</p>
+        <a href="#more">Read More</a>
+    </div>
+    <div class="product selected">
+        <div class="product-image"><img src="red-velvet-cupcake.png"/></div>
+        <h3>Red Velvet Cupcake</h3>
+        <p>Made popular by New York’s Waldorf Astoria Hotel, these cakes are five star.  Simple to make yet spectacular as a centrepiece, these red velvet cakes with cream cheese icing are luxurious.</p>
+        <a href="#more">Read More</a>
+    </div>
+    <div class="product selected">
+        <div class="product-image"><img src="black-forrest-cupcake.png"/></div>
+        <h3>Black Forrest Cupcake</h3>
+        <p>Inspired by the classic Black Forrest gateau, these dinky crumbly chocolate cakes are studded with sweet, sticky cherries and spiked with kirsch.</p>
+        <a href="#more">Read More</a>
+    </div>
+</div>
+<!-- end my products section -->
+
+<!-- start my story section -->
+<div id="story-container">
+    <h2>My Story</h2>
+    <div class="story-item">
+        <div class="image"><img src="the-beginning.png"/></div>
+        <div class="info">
+            <h3>The Beginning</h3>
+            <p>People have been eating cupcakes for 100 years, but it was in the 1990s when i first moved from Hongkong to Australia through the shared love of cooking with my dad that I became passionate about interested in baking and makeing sweet delights like cupcakes.</p>
+        </div>
+    </div>
+    <div class="story-item">
+        <div class="image"><img src="the-online-store.png"/></div>
+        <div class="info">
+            <h3>The Online Store</h3>
+            <p>I started baking cupcakes at home and its recenly that through encouragment from my friends at work that I ventured into this adventure of opening my first online presence as a cupcake connoisseur.</p>
+        </div>
+    </div>
+    <div class="story-item">
+        <div class="image"><img src="wendys-cupcakes-store.png"/></div>
+        <div class="info">
+            <h3>Wendy's Cupcakes Store</h3>
+            <p>What I love about cupcakes is that they can be varied with beatiful decorations and different tastes.  There isn’t a right or wrong and what’s most important is that they’re tasty!  My dream is to open my cupcake store and share my love and passion with cupcakes with people.</p>
+        </div>
+    </div>
+</div>
+<!-- end my story section -->
+
+<!-- start contact us section -->
+<div id="contactus-container">
+    <h2>Contact Us</h2>
+    <p>We’re making something sweet, yummy and beautiful, our store is opening soon stay informed through our news letters and updates for amazing deals.</p>
+    <div>
+        <div class="contact-form">
+            <fieldset>
+                <legend>Custom Order Form</legend>
+                <label for="Name">Name</label>
+                <input type="text" name="name" id="name" size="100"/>
+                <label for="Phone">Phone</label>
+                <input type="text" name="Phone" id="phone" size="100"/>
+                <label for="Email">Email</label>
+                <input type="text" name="Email" id="Email" size="100"/>
+                <label for="DateRequired">Date Required</label>
+                <input type="text" name="DateRequired" id="DateRequired" size="50"/>
+                <label for="Quantity">Quantity</label>
+                <input type="text" name="Quantity" id="Quantity" size="50"/>
+                <label for="Message">Message</label>
+                <textarea name="Message" id="message" rows="5" cols="50"></textarea>
+                <button value="Send Message"/>
+            </fieldset>
+        </div>
+        <div class="notify-me">
+            <fieldset>
+                <legend>Notify Me</legend>
+                <label for="Email">Email</label>
+                <input type="text" name="email" id="email-notify" size="100"/>
+                <button value="Subscribe"/>
+                <img src="thank-note.png"/>
+            </fieldset>
+        </div>
+    </div>
+</div>
+<!-- end contact us section -->
+
+<!-- start footer section -->
+<div class="footer-container">
+    <h2>Wendy's Cupcakes Are Made With <span><img src="love.png"/></span> in Canberra</h2>
+    <div class="footer-details">
+        <div id="contactus-email"><a mailto:info@wendyscupcakes.com" target="_top">info@wendyscupcakes.com</a></div>
+        <span>|</span>
+        <div id="copyright-notice">&copy;right @wendy & @triangular team 2016</div>
+    </div>
+</div>
+<!-- end footer section -->
+
 </body>
 </html>
