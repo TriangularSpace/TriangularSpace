@@ -1,0 +1,28 @@
+[
+    {
+        "custId": 1,
+        "custName": "James Smith",
+        "productName": "Red Velvet Cupcakes",
+        "orderSize": "Small - 6",
+        "progress": "in progress",
+        "orderType": "Normal",
+        "custPortrait": "http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png",
+        "orderDate": "12/12/2017",
+        "orderTime": "13:00",
+        "deliveryMethod": "pickup",
+        "totalCost": "$24"
+    },
+    {
+        "custId": 2,
+        "custName": "Bob Dylan",
+        "productName": "Mango Cupcakes",
+        "orderSize": "Medium - 12",
+        "progress": "in progress",
+        "orderType": "Normal",
+        "custPortrait": "http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png",
+        "orderDate": "12/12/2017",
+        "orderTime": "13:00",
+        "deliveryMethod": "pickup",
+        "totalCost": "$24"
+    }
+]
