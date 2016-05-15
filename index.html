@@ -50,6 +50,12 @@
 <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
+
+<script src="systemjs.config.js"></script>
+<script>
+  System.import('app').catch(function(err){ console.error(err); });
+</script>
+
 </head>
 
 
@@ -73,9 +79,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#page-top">
-        <div class="logo">WENDY'S CUPCAKES</div>
-      </a>
+      <a class="navbar-brand" href="#page-top">WENDY'S CUPCAKES</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -272,7 +276,7 @@
           <div class="row control-group">
             <div class="form-group col-xs-12 floating-label-form-group controls">
               <label>Email Address</label>
-              <input type="email" class="form-control" placeholder="Email Address" id="email" required
+              <input type="email" class="form-control" placeholder="Email Address" id="emailContact" required
                      data-validation-required-message="Please enter your email address.">
               <p class="help-block text-danger"></p>
             </div>

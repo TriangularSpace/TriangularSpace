@@ -30,6 +30,25 @@ a.active {
   color: #fff;
 }
 
+.navbar-brand:focus {
+  color: pink;
+
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #fff;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: #DC4E44;
+}
+
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #D66963;
+}
+
 .navbar-default .navbar-nav>li>a:hover {
   color: #fff;
   border-bottom: 2px solid #fff;
@@ -42,15 +61,9 @@ a.active {
   border-color: #7F7F7F;
 }
 
-
-.btn-success {
-  color: #ffffff;
-  background-color: #7F7F7F;
-  border-color: #7F7F7F;
-}
-
-.btn-success a:hover {
+.btn-success:hover {
    background-color: #DC4E44;
+  border-color: #DC4E44;
 }
 
 
@@ -106,6 +119,10 @@ hr.star-primary:after {
 }
 
 .img-centered {
+  margin: 0 auto;
+}
+
+.img-responsive {
   margin: 0 auto;
 }
 
@@ -241,7 +258,7 @@ section.success a.active {
   display: block;
   position: relative;
   margin: 10px auto;
-  max-width: 400px;
+  max-width: 300px;
 }
 
 #portfolio .portfolio-item .portfolio-link .caption {
@@ -261,7 +278,7 @@ section.success a.active {
 
 #portfolio .portfolio-item .portfolio-link .caption .caption-content {
   position: absolute;
-  top: 50%;
+  top: 30%;
   width: 100%;
   height: 20px;
   margin-top: -12px;
