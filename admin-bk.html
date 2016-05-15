@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<title>Wendy's Cupcakes Admin</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Wendy's Cupcakes">
+<meta name="author" content="Triangular Team">
+
+<!-- <link rel="stylesheet" href="styles.css"> -->
+
+<!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/main.css">
+
+<!--
+<link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+-->
+
+<!-- Custom Fonts -->
+<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+<!-- 1. Load libraries -->
+<!-- IE required polyfill -->
+<script src="node_modules/es6-shim/es6-shim.min.js"></script>
+<script src="node_modules/zone.js/dist/zone.js"></script>
+<script src="node_modules/reflect-metadata/Reflect.js"></script>
+<script src="node_modules/rxjs/bundles/Rx.umd.js"></script>
+<script src="node_modules/@angular/core/core.umd.js"></script>
+<script src="node_modules/@angular/common/common.umd.js"></script>
+<script src="node_modules/@angular/compiler/compiler.umd.js"></script>
+<script src="node_modules/@angular/platform-browser/platform-browser.umd.js"></script>
+<script src="node_modules/@angular/platform-browser-dynamic/platform-browser-dynamic.umd.js"></script>
+<script src="node_modules/systemjs/dist/system.src.js"></script>
+<script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+
+<!-- Custom Fonts -->
+<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+<link href='fullcalendar.css' rel='stylesheet'/>
+<link href='fullcalendar.print.css' rel='stylesheet' media='print'/>
+<script src='lib/moment.min.js'></script>
+<script src='lib/jquery.min.js'></script>
+<script src='fullcalendar.min.js'></script>
+<script>
+
+  $(document).ready(function () {
+
+    $('#calendar').fullCalendar({
+      header: {
+        left: 'prev,next',
+        center: 'title',
+        right: 'today'
+      },
+      defaultDate: '2016-05-12',
+      selectable: true,
+      selectHelper: true,
+      select: function (start, end) {
+        var title = prompt('Event Title:');
+        var eventData;
+        if (title) {
+          eventData = {
+            title: title,
+            start: start,
+            end: end
+          };
+          $('#calendar').fullCalendar('renderEvent', eventData, true); // stick? = true
+        }
+        $('#calendar').fullCalendar('unselect');
+      },
+      editable: true,
+      eventLimit: true, // allow "more" link when too many events
+    });
+
+  });
+
+</script>
+<style>
+
+  body {
+    margin: 40px 10px;
+    padding: 0;
+    font-family: "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+    font-size: 14px;
+  }
+
+  #calendar {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: inline;
+    height: 600px;
+  }
+
+  h5 {
+    font-family: Roboto, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+    font-size: 0.8em;
+    color: #4A4A4A;
+  }
+
+  .progress-bar {
+    background-color: #DC4E44;
+  }
+
+  .panel > .panel-heading {
+    background-color: #E3DFDF;
+    border-color: #E3DFDF;
+    color: #4A4A4A;
+  }
+
+</style>
+
+</head>
+
+
+<!-- 3. Display the application -->
+<body id="page-top" class="index">
+
+<!-- TODO fix this up
+<my-app>Customer Page</my-app>
+<a href="admin.html">Back to Admin Page</a>
+-->
+
+
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#page-top">WENDY'S CUPCAKES ADMIN</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="hidden">
+          <a href="#page-top"></a>
+        </li>
+        <li class="page-scroll">
+          <a href="#home-container">Home</a>
+        </li>
+        <li class="page-scroll">
+          <a href="#order-container">Orders</a>
+        </li>
+        <li class="page-scroll">
+          <a href="#message-container">Messages</a>
+        </li>
+        <li class="page-scroll">
+          <a href="#profile-container">Wendy Tse</a>
+        </li>
+        <li class="page-scroll">
+          <a href="index-bk.html">Logout</a>
+        </li>
+
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+
+
+<!-- Header -->
+<header id="home-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2>Hello Wendy, How are you Today?</h2>
+        <p>You have the <a href="#order-container">2</a> orders and <a href="#message-container">3</a> messages to work on today</p>
+        <br/>
+        <div id='calendar'></div>
+      </div>
+
+    </div>
+  </div>
+
+</header>
+
+
+<!-- orders Section -->
+<section id="order-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2>Manage Orders</h2>
+        <hr class="star-primary">
+        <br/>
+        <div>
+          <div>
+            <span><img src="img/small-red-cupcake.png"/> &nbsp;Bob Dylan - Red Velvet Cupcakes (Small - 6)</span>
+            <br/><br/>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="orders.progress" aria-valuemin="0" aria-valuemax="100" style="length: 50px; width:70%;">
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <span><img src="img/small-lemon-cupcake.png"/> &nbsp;Suger Ray - Lemon Meringue Cupcakes (Medium - 12)</span>
+            <br/><br/>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="orders.progress" aria-valuemin="0" aria-valuemax="100" style="length: 50px; width:70%;">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- orders Section -->
+<section id="message-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2>Manage Messages</h2>
+        <hr class="star-primary">
+        <br/>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h2 class="panel-title">Bob Dylan</h2>
+            <h5>Subject: Hi</h5>
+          </div>
+          <div class="panel-body">
+            Hi There, just wondering if you have anymore cupcakes?
+          </div>
+          <button type="submit" class="btn btn-success btn-sm">Reply</button>
+          <br/>
+          <br/>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h2 class="panel-title">Jane Dylan</h2>
+            <h5>Subject: Hi</h5>
+          </div>
+          <div class="panel-body">
+            Hi There, just wondering if you have anymore another 24 cupcakes?
+          </div>
+          <button type="submit" class="btn btn-success btn-sm">Reply</button>
+          <br/>
+          <br/>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h2 class="panel-title">Jake Smith</h2>
+            <h5>Subject: Hi</h5>
+          </div>
+          <div class="panel-body">
+            Hi There, can arrange delivery to Google HQ Angular Team? Red Velvet looks awesome :)
+          </div>
+          <button type="submit" class="btn btn-success btn-sm">Reply</button>
+          <br/>
+          <br/>
+        </div>
+      </div>
+    </div>
+    <br/><br/>
+    <div class="row">
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- orders Section -->
+<section id="profile-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2>Wendy Tse</h2>
+        <hr class="star-primary">
+        <p>Her profile details will go here</p>
+      </div>
+    </div>
+    <br/><br/>
+    <div class="row">
+
+    </div>
+
+  </div>
+
+</section>
+<!-- Footer -->
+<footer class="text-center">
+  <div class="row">
+    <div class="col-lg-12">
+      <img src="img/madewithlove.png" alt="Wendy's cupcakes are made with love in Canberra"/>
+    </div>
+  </div>
+  <br/><br/>
+
+  <div class="footer-below">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <a href="mailto:info@wendyscupcakes.com" target="_top">info@wendyscupcakes.com</a>
+        </div>
+        <div class="col-lg-6">
+          &copy;copyright @wendy & @triangular team 2016
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+<div class="scroll-top page-scroll visible-xs visible-sm">
+  <a class="btn btn-primary" href="#page-top">
+    <i class="fa fa-chevron-up"></i>
+  </a>
+</div>
+
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="js/classie.js"></script>
+<script src="js/cbpAnimatedHeader.js"></script>
+
+<!-- Contact Form JavaScript -->
+<script src="js/jqBootstrapValidation.js"></script>
+<script src="js/contact_me.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
