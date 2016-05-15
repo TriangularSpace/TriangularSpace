@@ -3,7 +3,6 @@ import {OrdersService} from './orders/orders.service';
 
 @Component({
     selector: 'my-app',
-    template: `<h1>My First Angular 2 App</h1>
-	        <a href="admin.html">Back to Admin Page</a>`
+    templateUrl: 'app/app.component.html'
 })
 export class AppComponent { }
