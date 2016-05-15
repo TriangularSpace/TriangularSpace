@@ -11,18 +11,31 @@ p.small {
   font-size: 16px;
 }
 
-a,
+a {
+  color: #7F7F7F;
+  text-decoration: none;
+}
+
 a:hover,
 a:focus,
 a:active,
 a.active {
   outline: 0;
-  color: #7F7F7F;
+  color: #DC4E44;
+  text-decoration: underline;
+  outline: 0;
 }
+
+
 
 .navbar-default {
   background-color: #DC4E44;
   margin-bottom: 2px;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+  color: #E3DFDF;
+  background-color: #D66963;
 }
 
 
@@ -30,10 +43,6 @@ a.active {
   color: #fff;
 }
 
-.navbar-brand:focus {
-  color: pink;
-
-}
 
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
   color: #fff;
@@ -51,8 +60,6 @@ a.active {
 
 .navbar-default .navbar-nav>li>a:hover {
   color: #fff;
-  border-bottom: 2px solid #fff;
-  margin-bottom: 2px;
 }
 
 .btn-success {
@@ -62,10 +69,47 @@ a.active {
 }
 
 .btn-success:hover {
-   background-color: #DC4E44;
+  background-color: #DC4E44;
   border-color: #DC4E44;
 }
 
+
+.btn-primary:hover {
+  color: #ffffff;
+  background-color: #DC4E44;
+  border-color: #DC4E44;
+}
+
+.btn-primary {
+  color: #ffffff;
+  background-color: #7F7F7F;
+  border-color: #7F7F7F;
+}
+
+
+.btn-success:active:hover, .btn-success.active:hover, .open>.dropdown-toggle.btn-success:hover, .btn-success:active:focus, .btn-success.active:focus, .open>.dropdown-toggle.btn-success:focus, .btn-success:active.focus, .btn-success.active.focus, .open>.dropdown-toggle.btn-success.focus {
+  color: #ffffff;
+  background-color: #DC4E44;
+  border-color: #DC4E44;
+}
+
+.btn-success:active:hover, .btn-success.active:hover, .open>.dropdown-toggle.btn-success:hover, .btn-success:active:focus, .btn-success.active:focus, .open>.dropdown-toggle.btn-success:focus, .btn-success:active.focus, .btn-success.active.focus, .open>.dropdown-toggle.btn-success.focus {
+  color: #ffffff;
+  background-color: #DC4E44;
+  border-color: #DC4E44;
+}
+
+.btn-success:focus, .btn-success.focus {
+  color: #ffffff;
+  background-color: #DC4E44;
+  border-color: #DC4E44;
+}
+
+.btn-primary:focus, .btn-primary.focus {
+  color: #ffffff;
+  background-color: #DC4E44;
+  border-color: #DC4E44;
+}
 
 h1,
 h2,
@@ -152,6 +196,10 @@ header .intro-text .name {
 header .intro-text .skills {
   font-size: 1.25em;
   font-weight: 300;
+}
+
+.intro-text p {
+  padding: 20px 0;
 }
 
 @media(min-width:768px) {
