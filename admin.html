@@ -9,7 +9,7 @@
 <!-- <link rel="stylesheet" href="styles.css"> -->
 
 <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
-<link  rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
 
 <!-- Custom CSS -->
 <link rel="stylesheet" href="css/main.css">
@@ -50,14 +50,14 @@
 <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
-<link href='fullcalendar.css' rel='stylesheet' />
-<link href='fullcalendar.print.css' rel='stylesheet' media='print' />
+<link href='fullcalendar.css' rel='stylesheet'/>
+<link href='fullcalendar.print.css' rel='stylesheet' media='print'/>
 <script src='lib/moment.min.js'></script>
 <script src='lib/jquery.min.js'></script>
 <script src='fullcalendar.min.js'></script>
 <script>
 
-  $(document).ready(function() {
+  $(document).ready(function () {
 
     $('#calendar').fullCalendar({
       header: {
@@ -68,7 +68,7 @@
       defaultDate: '2016-05-12',
       selectable: true,
       selectHelper: true,
-      select: function(start, end) {
+      select: function (start, end) {
         var title = prompt('Event Title:');
         var eventData;
         if (title) {
@@ -93,7 +93,7 @@
   body {
     margin: 40px 10px;
     padding: 0;
-    font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+    font-family: "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
     font-size: 14px;
   }
 
@@ -105,7 +105,16 @@
     padding-left: 15px;
     padding-right: 15px;
     display: inline;
-    height:600px;
+    height: 600px;
+  }
+
+  h5 {
+    font-family: Roboto, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+    font-size: 0.8em;
+  }
+
+  .progress-bar {
+    background-color: #DC4E44;
   }
 
 </style>
@@ -171,8 +180,8 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-6">
-          <h2>Hello Wendy, How are you Today?</h2>
-          <p>You have the 2 orders and 3 messages to work on today</p>
+        <h2>Hello Wendy, How are you Today?</h2>
+        <p>You have the 2 orders and 3 messages to work on today</p>
       </div>
       <div class="col-lg-6">
         <div id='calendar'></div>
@@ -194,22 +203,27 @@
         <br/>
         <div>
           <div>
-              <img src="img/red-cupcake.png"></img>
-              Bob Dylan - Red Velvet Cupcakes (Small - 6)
+            <span><img src="img/small-red-cupcake.png"/> &nbsp;Bob Dylan - Red Velvet Cupcakes (Small - 6)</span>
+            <br/><br/>
           </div>
           <div class="progress">
-              <div class="progress-bar" role="progressbar" aria-valuenow="orders.progress"
-              aria-valuemin="0" aria-valuemax="100" style="length: 50px; width:70%;">
-              </div>
+            <div class="progress-bar" role="progressbar" aria-valuenow="orders.progress" aria-valuemin="0" aria-valuemax="100" style="length: 50px; width:70%;">
+            </div>
           </div>
         </div>
+        <div>
+          <div>
+            <span><img src="img/small-lemon-cupcake.png"/> &nbsp;Suger Ray - Lemon Meringue Cupcakes (Medium - 12)</span>
+            <br/><br/>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="orders.progress" aria-valuemin="0" aria-valuemax="100" style="length: 50px; width:70%;">
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
-    <br/><br/>
-    <div class="row">
-
-    </div>
-
   </div>
 
 </section>
@@ -223,17 +237,16 @@
         <hr class="star-primary">
         <br/>
         <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h2 class="panel-title">
-                        Bob Dylan</h2>
-                        <h5 style="color: white">Subject: Hi</h5>
-                </div>
-                <div class="panel-body">
-                    Hi There, just wondering if you have anymore cupcakes?
-                </div>
-                <button type="submit" class="btn btn-success btn-sm">Reply</button>
-                <br/>
-                <br/>
+          <div class="panel-heading">
+            <h2 class="panel-title">Bob Dylan</h2>
+            <h5 style="color: white">Subject: Hi</h5>
+          </div>
+          <div class="panel-body">
+            Hi There, just wondering if you have anymore cupcakes?
+          </div>
+          <button type="submit" class="btn btn-success btn-sm">Reply</button>
+          <br/>
+          <br/>
         </div>
       </div>
     </div>

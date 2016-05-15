@@ -100,7 +100,7 @@
           <a href="#story-container">My Story</a>
         </li>
         <li class="page-scroll">
-          <a href="#your-basket">Your Basket</a>
+          <a href="#basketModal" data-toggle="modal">Your Basket</a>
         </li>
         <li class="page-scroll">
           <a href="#signup">Signup</a>
@@ -406,7 +406,6 @@
             <p>Sinking your teeth into these golden, buttery cakes with their gooey lemon centre and sticky white
               Italian
               meringue frosting is a sheer taste of heaven.</p>
-
             <form name="sentMessage" id="orderForm1" novalidate>
               <div class="row control-group">
                 <div class="row control-group">
@@ -435,8 +434,6 @@
                 </div>
               </div>
             </form>
-
-
           </div>
         </div>
       </div>
@@ -463,7 +460,6 @@
             <p>Made popular by New York's Waldorf Astoria Hotel, these cakes are five star. Simple to make yet
               spectacular as a
               centrepiece, these red velvet cakes with cream cheese icing are luxurious.</p>
-
             <form name="sentMessage" id="orderForm2" novalidate>
               <div class="row control-group">
                 <div class="row control-group">
@@ -492,7 +488,6 @@
                 </div>
               </div>
             </form>
-
           </div>
         </div>
       </div>
@@ -554,6 +549,45 @@
   </div>
 </div>
 
+
+<!-- Basket Modals -->
+
+<div class="product-modal modal fade" id="basketModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-content">
+    <div class="close-modal" data-dismiss="modal">
+      <div class="lr">
+        <div class="rl">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="modal-body">
+            <h2>My Shopping Basket</h2>
+            <hr class="star-primary">
+            <div>
+              <img src="img/red-cupcake.png" class="img-responsive img-centered" alt="">
+              <p>CupcakeType: RedVelvet</p>
+              <p>QuantityCode: Small</p>
+              <p>Quantity: 6</p>
+              <h3>Cost: 24</h3>
+            </div>
+            <form name="processOrder" id="basketForm" novalidate>
+                <div class="row">
+                  <div class="form-group col-xs-12">
+                    <button type="submit" class="btn btn-success btn-default">Checkout</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-shopping-basket" aria-hidden="true"></i>Continue Shopping
+                    </button>
+                  </div>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- jQuery -->
 <script src="js/jquery.js"></script>

@@ -27,7 +27,7 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration:none;
-    font-family:Roboto;
+    font-family: Roboto, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
     font-weight:bolder;
     font-size:46px;
 }
