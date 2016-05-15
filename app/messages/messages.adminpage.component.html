@@ -1,16 +1,13 @@
-<h2>Messages</h2>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="panel panel-primary" ng-repeat="message in messages">
-                <article class="message">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">
-                            {{message.subject}} from {{message.custName}}</h3>
-                    </div>
-                    <div class="panel-body">
-                        {{message.messageContent}}
-                    </div>
-                </article>
-            </div>
-        </div>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2 class="panel-title">
+            {{message.custName}}</h2>
+            <h5 style="color: white">Subject: {{message.subject}}</h5>
     </div>
+    <div class="panel-body">
+        {{message.messageContent}}
+    </div>
+    <button type="submit" class="btn btn-success btn-sm">Reply</button>
+    <br/>
+    <br/>
+</div>
