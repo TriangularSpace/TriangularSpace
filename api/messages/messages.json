@@ -1,0 +1,14 @@
+[
+    {
+        "custId": 1,
+        "custName": "James Smith",
+        "subject": "Hello",
+        "messageContent": "Do you have anymore cupcakes?"
+    },
+    {
+        "custId": 2,
+        "custName": "Bob Dylan",
+        "subject": "Hi",
+        "messageContent": "Do you sell cakes?"
+    }
+]
