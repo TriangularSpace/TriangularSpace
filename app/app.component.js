@@ -9,13 +9,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+require('js/jquery.js');
+require('js/bootstrap.min.js');
+require('http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js');
+require('js/classie.js');
+require('js/cbpAnimatedHeader.js');
+require('js/jqBootstrapValidation.js');
+require('js/contact_me.js');
+require('js/main.js');
 var AppComponent = (function () {
     function AppComponent() {
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            templateUrl: 'app/app.component.html'
+            templateUrl: 'app/app.component.html',
+            styleUrls: ['css/bootstrap.css', 'css/bootstrap.min.css', 'css/main.css']
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
