@@ -53,7 +53,9 @@
 
 <script src="systemjs.config.js"></script>
 <script>
-  System.import('app').catch(function(err){ console.error(err); });
+  System.import('app').catch(function (err) {
+    console.error(err);
+  });
 </script>
 
 </head>
@@ -92,7 +94,7 @@
           <a href="#home-container">Home</a>
         </li>
         <li class="page-scroll">
-          <a href="#portfolio">My Products</a>
+          <a href="#product">My Products</a>
         </li>
         <li class="page-scroll">
           <a href="#story-container">My Story</a>
@@ -134,8 +136,8 @@
 </header>
 
 
-<section id="portfolio">
-  <div class="container" >
+<section id="product">
+  <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
         <h2>My Products</h2>
@@ -143,8 +145,8 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-4 portfolio-item">
-        <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+      <div class="col-sm-4 product-item">
+        <a href="#productModal1" class="product-link" data-toggle="modal">
           <div class="caption">
             <div class="caption-content">
               <i class="fa fa-search-plus fa-3x">
@@ -158,8 +160,8 @@
           <img src="img/lemon-meringue-cupcake.png" class="img-responsive" alt="">
         </a>
       </div>
-      <div class="col-sm-4 portfolio-item">
-        <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+      <div class="col-sm-4 product-item">
+        <a href="#productModal2" class="product-link" data-toggle="modal">
           <div class="caption">
             <div class="caption-content">
               <i class="fa fa-search-plus fa-3x">
@@ -173,8 +175,8 @@
           <img src="img/red-velvet-cupcake.png" class="img-responsive" alt="">
         </a>
       </div>
-      <div class="col-sm-4 portfolio-item">
-        <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+      <div class="col-sm-4 product-item">
+        <a href="#productModal3" class="product-link" data-toggle="modal">
           <div class="caption">
             <div class="caption-content">
               <i class="fa fa-search-plus fa-3x">
@@ -384,9 +386,9 @@
 </div>
 
 
-<!-- Portfolio Modals -->
+<!-- Product Modals -->
 
-<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="product-modal modal fade" id="productModal1" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-content">
     <div class="close-modal" data-dismiss="modal">
       <div class="lr">
@@ -443,7 +445,7 @@
 </div>
 
 
-<div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="product-modal modal fade" id="productModal2" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-content">
     <div class="close-modal" data-dismiss="modal">
       <div class="lr">
@@ -499,7 +501,7 @@
 </div>
 
 
-<div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="product-modal modal fade" id="productModal3" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-content">
     <div class="close-modal" data-dismiss="modal">
       <div class="lr">
